@@ -16,6 +16,8 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.Random;
+
 public class SinglePlayer extends AppCompatActivity
 {
 
@@ -205,382 +207,148 @@ public class SinglePlayer extends AppCompatActivity
                     }
         }
 
-        public void computador()
-        {
+        public void computador() {
             jogadas++;
-            int[] aux = new int[4];
-            int i, j;
-
-            aux[1] = tabuleiro[1][1];
-            if(aux[1] == 0)
-            {
-                tabuleiro[1][1] = 2;
-                return;
-            }
-
-            for(j = 2; j >= 1; j--)
-            {
-                for(i = 0; i <= 2; i++)
-                {
-                    aux[1] = tabuleiro[0][i];
-                    aux[2] = tabuleiro[1][i];
-                    aux[3] = tabuleiro[2][i];
-                    if((aux[1] == aux[3]) && (aux[2] == 0) && (aux[1] == j))
-                    {
-                        aux[0] = tabuleiro[1][i];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[1][i] = 2;
-                            return;
-                        }
-                    }
-                    else if((aux[1] == aux[2]) && (aux[3] == 0) && (aux[1] == j))
-                    {
-                        aux[0] = tabuleiro[2][i];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[2][i] = 2;
-                            return;
-                        }
-                    }
-                    else if((aux[2] == aux[3]) && (aux[1] == 0) && (aux[2] == j))
-                    {
-                        aux[0] = tabuleiro[0][i];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[0][i] = 2;
-                            return;
-                        }
-                    }
-
-                    aux[1] = tabuleiro[i][0];
-                    aux[2] = tabuleiro[i][1];
-                    aux[3] = tabuleiro[i][2];
-                    if((aux[1] == aux[3]) && (aux[2] == 0) && (aux[1] == j))
-                    {
-                        aux[0] = tabuleiro[i][1];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[i][1] = 2;
-                            return;
-                        }
-                    }
-                    else if((aux[1] == aux[2]) && (aux[3] == 0) && (aux[1] == j))
-                    {
-                        aux[0] = tabuleiro[i][2];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[i][2] = 2;
-                            return;
-                        }
-                    }
-                    else if((aux[2] == aux[3]) && (aux[1] == 0) && (aux[2] == j))
-                    {
-                        aux[0] = tabuleiro[i][0];
-                        if(aux[0] == 0)
-                        {
-                            tabuleiro[i][0] = 2;
-                            return;
-                        }
-                    }
-                }
-
-                aux[1] = tabuleiro[0][0];
-                aux[2] = tabuleiro[1][1];
-                aux[3] = tabuleiro[2][2];
-                if((aux[1] == aux[3]) && (aux[2] == 0) && (aux[1] == j))
-                {
-                    aux[0] = tabuleiro[1][1];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[1][1] = 2;
-                        return;
-                    }
-                }
-                else if((aux[1] == aux[2]) && (aux[3] == 0) && (aux[1] == j))
-                {
-                    aux[0] = tabuleiro[2][2];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[2][2] = 2;
-                        return;
-                    }
-                }
-                else if((aux[2] == aux[3]) && (aux[1] == 0) && (aux[2] == j))
-                {
-                    aux[0] = tabuleiro[0][0];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[0][0] = 2;
-                        return;
-                    }
-                }
-
-                aux[1] = tabuleiro[2][0];
-                aux[3] = tabuleiro[0][2];
-                if((aux[1] == aux[3]) && (aux[2] == 0) && (aux[1] == j))
-                {
-                    aux[0] = tabuleiro[1][1];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[1][1] = 2;
-                        return;
-                    }
-                }
-                else if((aux[1] == aux[2]) && (aux[3] == 0) && (aux[1] == j))
-                {
-                    aux[0] = tabuleiro[0][2];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[0][2] = 2;
-                        return;
-                    }
-                }
-                else if((aux[2] == aux[3]) && (aux[1] == 0) && (aux[2] == j))
-                {
-                    aux[0] = tabuleiro[2][0];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[2][0] = 2;
-                        return;
-                    }
-                }
-            }
-
-            aux[1] = tabuleiro[0][0];
-            aux[2] = tabuleiro[2][2];
-            if((aux[1] == 1) && (aux[2] == 1))
-            {
-                aux[0] = tabuleiro[1][0];
-                if(aux[0] == 0)
-                {
-                    tabuleiro[1][0] = 2;
-                    return;
-                }
-            }
-            aux[1] = tabuleiro[2][0];
-            aux[2] = tabuleiro[0][2];
-            if((aux[1] == 1) && (aux[2] == 1))
-            {
-                aux[0] = tabuleiro[1][0];
-                if(aux[0] == 0)
-                {
-                    tabuleiro[1][0] = 2;
-                    return;
-                }
-            }
-            aux[1] = tabuleiro[1][0];
-            aux[2] = tabuleiro[2][1];
-            aux[3] = tabuleiro[0][1];
-            if((aux[1] == 1) && (aux[2] == 1))
-            {
-                aux[0] = tabuleiro[2][0];
-                if(aux[0] == 0)
-                {
-                    tabuleiro[2][0] = 2;
-                    return;
-                }
-            }
-            if((aux[1] == 1) && (aux[3] == 1))
-            {
-                aux[0] = tabuleiro[0][0];
-                if(aux[0] == 0)
-                {
+            /*-----VERIFICA SE É POSSÍVEL GANHAR-----*/
+            //Diagonal cima/baixo
+            if ((tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == 2 && tabuleiro[2][2] == 0) || (tabuleiro[0][0] == tabuleiro[2][2] && tabuleiro[2][2] == 2 && tabuleiro[1][1] == 0) || (tabuleiro[2][2] == tabuleiro[1][1] && tabuleiro[1][1] == 2 && tabuleiro[0][0] == 0)) {
+                Log.v("Computador","Ataca diagonal cima/baixo");
+                if (tabuleiro[0][0] == 0) {
                     tabuleiro[0][0] = 2;
                     return;
-                }
-            }
-            if((aux[3] == 1) && (aux[2] == 1))
-            {
-                aux[0] = tabuleiro[0][0];
-                if(aux[0] == 0)
-                {
-                    tabuleiro[0][0] = 2;
+                } else if (tabuleiro[1][1] == 0) {
+                    tabuleiro[1][1] = 2;
                     return;
-                }
-            }
-            aux[1] = tabuleiro[1][2];
-            if((aux[1] == 1) && (aux[2] == 1))
-            {
-                aux[0] = tabuleiro[2][2];
-                if(aux[0] == 0)
-                {
+                } else {
                     tabuleiro[2][2] = 2;
                     return;
                 }
             }
-            if((aux[1] == 1) && (aux[3] == 1))
-            {
-                aux[0] = tabuleiro[0][2];
-                if(aux[0] == 0)
-                {
+            //Diagonal baixo/cima
+            if ((tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == 2 && tabuleiro[2][0] == 0) || (tabuleiro[0][2] == tabuleiro[2][0] && tabuleiro[2][0] == 2 && tabuleiro[1][1] == 0) || (tabuleiro[2][0] == tabuleiro[1][1] && tabuleiro[1][1] == 2 && tabuleiro[0][2] == 0)) {
+                Log.v("Computador","Ataca diagonal baixo/cima");
+                if (tabuleiro[0][2] == 0) {
                     tabuleiro[0][2] = 2;
                     return;
-                }
-            }
-            aux[1] = tabuleiro[0][0];
-            aux[2] = tabuleiro[1][1];
-            aux[3] = tabuleiro[2][2];
-            if((aux[1] == 2) && (aux[2] == 1) && (aux[3] == 1))
-            {
-                aux[0] = tabuleiro[2][0];
-                if(aux[0] == 0)
-                {
+                } else if (tabuleiro[1][1] == 0) {
+                    tabuleiro[1][1] = 2;
+                    return;
+                } else {
                     tabuleiro[2][0] = 2;
                     return;
                 }
             }
-
-            for(i = 0; i <= 2; i++)
-            {
-                aux[1] = tabuleiro[0][i];
-                aux[2] = tabuleiro[1][i];
-                aux[3] = tabuleiro[2][i];
-                if((aux[1] == 2) && (aux[2] == 0) && (aux[3] == 0))
-                {
-                    aux[0] = tabuleiro[0][i];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[0][i] = 2;
+            //Linhas
+            for (int i = 0; i < 3; i++) {
+                if ((tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][1] == 2 && tabuleiro[i][2] == 0) || (tabuleiro[i][0] == tabuleiro[i][2] && tabuleiro[i][2] == 2 && tabuleiro[i][1] == 0) || (tabuleiro[i][2] == tabuleiro[i][1] && tabuleiro[i][1] == 2 && tabuleiro[i][0] == 0)) {
+                    Log.v("Computador","Ataca linha " + i);
+                    if (tabuleiro[i][0] == 0) {
+                        tabuleiro[i][0] = 2;
                         return;
-                    }
-                }
-                if((aux[2] == 2) && (aux[1] == 0) && (aux[3] == 0))
-                {
-                    aux[0] = tabuleiro[0][i];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[0][i] = 2;
-                        return;
-                    }
-                }
-                if((aux[3] == 2) && (aux[1] == 0) && (aux[2] == 0))
-                {
-                    aux[0] = tabuleiro[0][i];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[0][i] = 2;
-                        return;
-                    }
-                }
-                aux[1] = tabuleiro[i][0];
-                aux[2] = tabuleiro[i][1];
-                aux[3] = tabuleiro[i][2];
-                if((aux[1] == 2) && (aux[2] == 0) && (aux[3] == 0))
-                {
-                    aux[0] = tabuleiro[i][1];
-                    if(aux[0] == 0)
-                    {
+                    } else if (tabuleiro[i][1] == 0) {
                         tabuleiro[i][1] = 2;
                         return;
-                    }
-                }
-                if((aux[2] == 2) && (aux[1] == 0) && (aux[3] == 0))
-                {
-                    aux[0] = tabuleiro[i][0];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[i][0] = 2;
-                        return;
-                    }
-                }
-                if((aux[3] == 2) && (aux[1] == 0) && (aux[2] == 0))
-                {
-                    aux[0] = tabuleiro[i][0];
-                    if(aux[0] == 0)
-                    {
-                        tabuleiro[i][0] = 2;
+                    } else {
+                        tabuleiro[i][2] = 2;
                         return;
                     }
                 }
             }
-            aux[1] = tabuleiro[0][0];
-            aux[2] = tabuleiro[1][1];
-            aux[3] = tabuleiro[2][2];
-            if((aux[2] == 2) && (aux[1] == 0) && (aux[3] == 0))
-            {
-                aux[0] = tabuleiro[0][0];
-                if(aux[0] == 0)
-                {
+            //Colunas
+            for (int i = 0; i < 3; i++) {
+                if ((tabuleiro[0][i] == tabuleiro[1][i] && tabuleiro[1][i] == 2 && tabuleiro[2][i] == 0) || (tabuleiro[0][i] == tabuleiro[2][i] && tabuleiro[2][i] == 2 && tabuleiro[1][i] == 0) || (tabuleiro[2][i] == tabuleiro[1][i] && tabuleiro[1][i] == 2 && tabuleiro[0][i] == 0)) {
+                    Log.v("Computador","Ataca coluna " + i);
+                    if (tabuleiro[0][i] == 0) {
+                        tabuleiro[0][i] = 2;
+                        return;
+                    } else if (tabuleiro[1][i] == 0) {
+                        tabuleiro[1][i] = 2;
+                        return;
+                    } else {
+                        tabuleiro[2][i] = 2;
+                        return;
+                    }
+                }
+            }
+	        /*-----FIM DA VERIFICAÇÃO DE VITÓRIA-----*/
+
+	        /*-----VERIFICA SE É POSSÍVEL PERDER-----*/
+            //Diagonal cima/baixo
+            if ((tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == 1 && tabuleiro[2][2] == 0) || (tabuleiro[0][0] == tabuleiro[2][2] && tabuleiro[2][2] == 1 && tabuleiro[1][1] == 0) || (tabuleiro[2][2] == tabuleiro[1][1] && tabuleiro[1][1] == 1 && tabuleiro[0][0] == 0)) {
+                Log.v("Computador","Defende diagonal cima/baixo");
+                if (tabuleiro[0][0] == 0) {
                     tabuleiro[0][0] = 2;
                     return;
-                }
-            }
-            aux[1] = tabuleiro[2][0];
-            aux[3] = tabuleiro[0][2];
-            if((aux[2] == 2) && (aux[1] == 0) && (aux[3] == 0))
-            {
-                aux[0] = tabuleiro[0][2];
-                if(aux[0] == 0)
-                {
-                    tabuleiro[0][2] = 2;
+                } else if (tabuleiro[1][1] == 0) {
+                    tabuleiro[1][1] = 2;
+                    return;
+                } else {
+                    tabuleiro[2][2] = 2;
                     return;
                 }
             }
-            aux[1] = tabuleiro[0][0];
-            if(aux[1] == 2)
-            {
-                aux[2] = tabuleiro[1][1];
-                aux[3] = tabuleiro[2][2];
-                if((aux[3] == 0) && (aux[2] == 0))
-                {
-                    aux[1] = tabuleiro[2][1];
-                    aux[2] = tabuleiro[0][1];
-                    if((aux[1] != 1) && (aux[2] != 1))
-                    {
-                        aux[1] = tabuleiro[1][0];
-                        aux[2] = tabuleiro[1][2];
-                        if((aux[1] != 1) && (aux[2] != 1))
-                        {
-                            aux[0] = tabuleiro[2][2];
-                            if(aux[0] == 0)
-                            {
-                                tabuleiro[2][2] = 2;
-                                return;
-                            }
-                        }
+            //Diagonal baixo/cima
+            if ((tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == 1 && tabuleiro[2][0] == 0) || (tabuleiro[0][2] == tabuleiro[2][0] && tabuleiro[2][0] == 1 && tabuleiro[1][1] == 0) || (tabuleiro[2][0] == tabuleiro[1][1] && tabuleiro[1][1] == 1 && tabuleiro[0][2] == 0)) {
+                Log.v("Computador","Defende diagonal baixo/cima");
+                if (tabuleiro[0][2] == 0) {
+                    tabuleiro[0][2] = 2;
+                    return;
+                } else if (tabuleiro[1][1] == 0) {
+                    tabuleiro[1][1] = 2;
+                    return;
+                } else {
+                    tabuleiro[2][0] = 2;
+                    return;
+                }
+            }
+            //Linhas
+            for (int i = 0; i < 3; i++) {
+                if ((tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][1] == 1 && tabuleiro[i][2] == 0) || (tabuleiro[i][0] == tabuleiro[i][2] && tabuleiro[i][2] == 1 && tabuleiro[i][1] == 0) || (tabuleiro[i][2] == tabuleiro[i][1] && tabuleiro[i][1] == 1 && tabuleiro[i][0] == 0)) {
+                    Log.v("Computador","Defende linha " + i);
+                    if (tabuleiro[i][0] == 0) {
+                        tabuleiro[i][0] = 2;
+                        return;
+                    } else if (tabuleiro[i][1] == 0) {
+                        tabuleiro[i][1] = 2;
+                        return;
+                    } else {
+                        tabuleiro[i][2] = 2;
+                        return;
                     }
                 }
             }
-            for(i = 0; i <= 2; i++)
-            {
-                aux[1] = tabuleiro[0][i];
-                aux[2] = tabuleiro[1][i];
-                aux[3] = tabuleiro[2][i];
-                if(aux[1] == 0)
-                {
-                    tabuleiro[0][i] = 2;
-                    return;
-                }
-                else if(aux[2] == 0)
-                {
-                    tabuleiro[0][i] = 2;
-                    return;
-                }
-                else if(aux[3] == 0)
-                {
-                    tabuleiro[0][i] = 2;
-                    return;
-                }
-                aux[1] = tabuleiro[i][0];
-                aux[2] = tabuleiro[i][1];
-                aux[3] = tabuleiro[i][2];
-                if(aux[1] == 0)
-                {
-                    tabuleiro[i][0] = 2;
-                    return;
-                }
-                else if(aux[2] == 0)
-                {
-                    tabuleiro[i][1] = 2;
-                    return;
-                }
-                else if(aux[3] == 0)
-                {
-                    tabuleiro[i][2] = 2;
-                    return;
+            //Colunas
+            for (int i = 0; i < 3; i++) {
+                if ((tabuleiro[0][i] == tabuleiro[1][i] && tabuleiro[1][i] == 1 && tabuleiro[2][i] == 0) || (tabuleiro[0][i] == tabuleiro[2][i] && tabuleiro[2][i] == 1 && tabuleiro[1][i] == 0) || (tabuleiro[2][i] == tabuleiro[1][i] && tabuleiro[1][i] == 1 && tabuleiro[0][i] == 0)) {
+                    Log.v("Computador","Defende coluna " + i);
+                    if (tabuleiro[0][i] == 0) {
+                        tabuleiro[0][i] = 2;
+                        return;
+                    } else if (tabuleiro[1][i] == 0) {
+                        tabuleiro[1][i] = 2;
+                        return;
+                    } else {
+                        tabuleiro[2][i] = 2;
+                        return;
+                    }
                 }
             }
+	        /*-----FIM DA VERIFICAÇÃO DE DERROTA-----*/
+
+	        /*-----SE NENHUMA DAS CONDIÇÕES ACIMA OCORRER, SEJA ALEATÓRIO-----*/
+            boolean inserir = true;
+            while (inserir) {
+                Random random = new Random();
+                int c, l;
+                c = random.nextInt(3);
+                l = random.nextInt(3);
+                if (tabuleiro[l][c] == 0) {
+                    Log.v("Computador","Jogada aleatória");
+                    tabuleiro[l][c] = 2;
+                    inserir = false;
+                }
+            }
+            return;
         }
 
         private void ganhaMoedas(int valor)
