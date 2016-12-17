@@ -170,13 +170,13 @@ public class TwoPlayers extends AppCompatActivity
             p.setColor(Color.parseColor("#858C00"));
             SharedPreferences settings = getSharedPreferences("Settings", MODE_PRIVATE);
             int coins = settings.getInt("Coins", 0);
-            c.drawText("Coins: " + coins, w / 25 + 20, 21 * h / 25, p);
+            c.drawText("Coins: " + coins, w / 25 + 20, 24 * h / 25, p);
             p.setColor(new Color().rgb(30, 30, 30));
 
-            c.drawLine((w / 3), diferenca / 2, (w / 3), h - diferenca / 2, p);
-            c.drawLine(2 * (w / 3), diferenca / 2, 2 * (w / 3), h - diferenca / 2, p);
-            c.drawLine(25, (diferenca / 2) + (w / 3), w - 25, (diferenca / 2) + (w / 3), p);
-            c.drawLine(25, (diferenca / 2) + 2 * (w / 3), w - 25, (diferenca / 2) + 2 * (w / 3), p);
+            c.drawLine((w / 3), diferenca / 2 + 2*(h/25), (w / 3), h - diferenca / 2 + 2*(h/25), p);
+            c.drawLine(2 * (w / 3), diferenca / 2 + 2*(h/25), 2 * (w / 3), h - diferenca / 2 + 2*(h/25), p);
+            c.drawLine(25, (diferenca / 2) + (w / 3) + 2*(h/25), w - 25, (diferenca / 2) + (w / 3) + 2*(h/25), p);
+            c.drawLine(25, (diferenca / 2) + 2 * (w / 3) + 2*(h/25), w - 25, (diferenca / 2) + 2 * (w / 3) + 2*(h/25), p);
 
             for(int n = 0; n < 3; n++)
                 for(int m = 0; m < 3; m++)
@@ -185,7 +185,7 @@ public class TwoPlayers extends AppCompatActivity
                         Bitmap bmpC;
                         bmpC = Bitmap.createBitmap(BitmapFactory.decodeResource(this.getResources(), pO));
                         bmpC.prepareToDraw();
-                        int l = m * (w / 3) + w / 20, t = (diferenca / 2) + n * (w / 3) + w / 20, r = (m + 1) * (w / 3) - w / 20, b = (diferenca / 2) + (n + 1) * (w / 3) - w / 20;
+                        int l = m * (w / 3) + w / 20, t = (diferenca / 2) + n * (w / 3) + w / 20 + 2*(h/25), r = (m + 1) * (w / 3) - w / 20, b = (diferenca / 2) + (n + 1) * (w / 3) - w / 20 + 2*(h/25);
                         c.drawBitmap(bmpC, null, new Rect(l, t, r, b), p);
                     }
 
@@ -197,7 +197,7 @@ public class TwoPlayers extends AppCompatActivity
                         Bitmap bmpX;
                         bmpX = Bitmap.createBitmap(BitmapFactory.decodeResource(this.getResources(), pX));
                         bmpX.prepareToDraw();
-                        int l = m * (w / 3) + w / 20, t = (diferenca / 2) + n * (w / 3) + w / 20, r = (m + 1) * (w / 3) - w / 20, b = (diferenca / 2) + (n + 1) * (w / 3) - w / 20;
+                        int l = m * (w / 3) + w / 20, t = (diferenca / 2) + n * (w / 3) + w / 20 + 2*(h/25), r = (m + 1) * (w / 3) - w / 20, b = (diferenca / 2) + (n + 1) * (w / 3) - w / 20 + 2*(h/25);
                         c.drawBitmap(bmpX, null, new Rect(l, t, r, b), p);
                     }
         }
