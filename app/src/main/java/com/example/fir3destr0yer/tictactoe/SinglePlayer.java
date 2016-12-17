@@ -373,7 +373,7 @@ public class SinglePlayer extends AppCompatActivity
                     if(tabuleiro[i][2] == 1)
                     {
                         p1++;
-                        ganhaMoedas(10000);
+                        ganhaMoedas(10);
                     }
                     else
                     {
@@ -397,7 +397,7 @@ public class SinglePlayer extends AppCompatActivity
                     if(tabuleiro[2][i] == 1)
                     {
                         p1++;
-                        ganhaMoedas(10000);
+                        ganhaMoedas(10);
                     }
                     else
                     {
@@ -419,7 +419,7 @@ public class SinglePlayer extends AppCompatActivity
                 if(tabuleiro[1][1] == 1)
                 {
                     p1++;
-                    ganhaMoedas(10000);
+                    ganhaMoedas(10);
                 }
                 else
                 {
@@ -440,7 +440,7 @@ public class SinglePlayer extends AppCompatActivity
                 if(tabuleiro[1][1] == 1)
                 {
                     p1++;
-                    ganhaMoedas(10000);
+                    ganhaMoedas(10);
                 }
                 else
                 {
@@ -466,7 +466,7 @@ public class SinglePlayer extends AppCompatActivity
                     }
                 }
                 jogadas = 0;
-                ganhaMoedas(10);
+                ganhaMoedas(1);
             }
         }
     }
