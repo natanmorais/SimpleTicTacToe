@@ -8,12 +8,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -133,13 +131,13 @@ public class TwoPlayers extends AppCompatActivity
             can = c;
             Paint p = new Paint();
             p.setStyle(Paint.Style.STROKE);
-            Display display = getWindowManager().getDefaultDisplay();
-            Point pt = new Point();
-            display.getSize(pt);
+            //Display display = getWindowManager().getDefaultDisplay();
+            //Point pt = new Point();
+            //display.getSize(pt);
             p.setTextSize(30);
 
-            w = pt.x;
-            h = pt.y;
+            w = c.getWidth();
+            h = c.getHeight();
             int diferenca = h - w;
 
             Bitmap bmp;
