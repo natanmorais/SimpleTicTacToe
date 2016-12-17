@@ -1,17 +1,17 @@
 package com.example.fir3destr0yer.tictactoe;
 
-import android.widget.ImageView;
-
 /**
  * Created by fir3destr0yer on 14/12/16.
  */
-public class Icones {
+public class Icones
+{
     int imgO, imgX;
     String nome;
     boolean selecionado, comprado;
     int valor;
 
-    public Icones(int imgO, int imgX, String nome, boolean selecionado, boolean comprado, int valor) {
+    public Icones(int imgO, int imgX, String nome, boolean selecionado, boolean comprado, int valor)
+    {
         this.imgO = imgO;
         this.imgX = imgX;
         this.nome = nome;
@@ -20,52 +20,64 @@ public class Icones {
         this.valor = valor;
     }
 
-    public int getImgO() {
+    public int getImgO()
+    {
         return imgO;
     }
 
-    public void setImgO(int imgO) {
+    public void setImgO(int imgO)
+    {
         this.imgO = imgO;
     }
 
-    public int getImgX() {
+    public int getImgX()
+    {
         return imgX;
     }
 
-    public void setImgX(int imgX) {
+    public void setImgX(int imgX)
+    {
         this.imgX = imgX;
     }
 
-    public String getNome() {
+    public String getNome()
+    {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome)
+    {
         this.nome = nome;
     }
 
-    public boolean isSelecionado() {
+    public boolean isSelecionado()
+    {
         return selecionado;
     }
 
-    public void setSelecionado(boolean selecionado) {
+    public void setSelecionado(boolean selecionado)
+    {
         this.selecionado = selecionado;
     }
 
-    public boolean isComprado() {
+    public boolean isComprado()
+    {
         return comprado;
     }
 
-    public void setComprado(boolean comprado) {
+    public void setComprado(boolean comprado)
+    {
         this.comprado = comprado;
         setValor(0);
     }
 
-    public int getValor() {
+    public int getValor()
+    {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(int valor)
+    {
         this.valor = valor;
     }
 }

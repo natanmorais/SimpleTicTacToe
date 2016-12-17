@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?><!-- A CardView that contains a TextView -->
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    card_view:cardElevation="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="5dp"
-    card_view:cardBackgroundColor="@color/cardview_light_background"
-    card_view:cardCornerRadius="4dp">
+                                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:id="@+id/card_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    card_view:cardBackgroundColor="@color/cardview_light_background"
+                                    card_view:cardCornerRadius="4dp"
+                                    card_view:cardElevation="10dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+ <RelativeLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/Icon_O"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/basic2_o" />
+  <ImageView
+   android:id="@+id/Icon_O"
+   android:layout_width="50dp"
+   android:layout_height="50dp"
+   android:layout_centerVertical="true"
+   android:src="@drawable/basic2_o"/>
 
-        <ImageView
-            android:id="@+id/Icon_X"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/Icon_O"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/basic2_x" />
+  <ImageView
+   android:id="@+id/Icon_X"
+   android:layout_width="50dp"
+   android:layout_height="50dp"
+   android:layout_centerVertical="true"
+   android:layout_marginLeft="10dp"
+   android:layout_toRightOf="@id/Icon_O"
+   android:src="@drawable/basic2_x"/>
 
-        <TextView
-            android:id="@+id/txtTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/Icon_X"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            style="@style/TextAppearance.AppCompat.Large"
-            tools:text="Basic Icons"/>
+  <TextView
+   android:id="@+id/txtTitulo"
+   style="@style/TextAppearance.AppCompat.Large"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_marginLeft="20dp"
+   android:layout_toRightOf="@id/Icon_X"
+   android:textColor="@android:color/black"
+   android:textStyle="bold"
+   tools:text="Basic Icons"/>
 
-        <ImageView
-            android:id="@+id/Coin"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/txtTitulo"
-            android:layout_toRightOf="@id/Icon_X"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/coin_icon" />
+  <ImageView
+   android:id="@+id/Coin"
+   android:layout_width="30dp"
+   android:layout_height="30dp"
+   android:layout_below="@id/txtTitulo"
+   android:layout_marginLeft="10dp"
+   android:layout_toRightOf="@id/Icon_X"
+   android:src="@drawable/coin_icon"/>
 
-        <TextView
-            android:id="@+id/txtDescricao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/Coin"
-            android:layout_below="@id/txtTitulo"
-            android:layout_marginTop="3dp"
-            android:textColor="@android:color/black"
-            style="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp"
-            tools:text="20"/>
+  <TextView
+   android:id="@+id/txtDescricao"
+   style="@style/TextAppearance.AppCompat.Body1"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_below="@id/txtTitulo"
+   android:layout_marginTop="3dp"
+   android:layout_toRightOf="@id/Coin"
+   android:textColor="@android:color/black"
+   android:textSize="20dp"
+   tools:text="20"/>
 
-        <TextView
-            android:id="@+id/txtSelecionado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtTitulo"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="6dp"
-            android:textColor="#000099"
-            style="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="15dp"
-            tools:text="SELECIONADO"/>
-    </RelativeLayout>
+  <TextView
+   android:id="@+id/txtSelecionado"
+   style="@style/TextAppearance.AppCompat.Body1"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_alignParentRight="true"
+   android:layout_below="@id/txtTitulo"
+   android:layout_marginTop="6dp"
+   android:textColor="#000099"
+   android:textSize="15dp"
+   tools:text="SELECIONADO"/>
+ </RelativeLayout>
 
 </android.support.v7.widget.CardView>

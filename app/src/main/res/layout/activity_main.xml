@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.fir3destr0yer.tictactoe.MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.fir3destr0yer.tictactoe.MainActivity">
 
-    <ImageView android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo_1_novo"/>
+ <ImageView
+  android:id="@+id/Logo"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_centerHorizontal="true"
+  android:src="@drawable/logo_1_novo"/>
 
-    <ImageView android:id="@+id/Single"
-        android:layout_width="262dp"
-        android:layout_height="56dp"
-        android:src="@drawable/singleplayer"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+ <ImageView
+  android:id="@+id/Single"
+  android:layout_width="262dp"
+  android:layout_height="56dp"
+  android:layout_centerHorizontal="true"
+  android:layout_centerVertical="true"
+  android:src="@drawable/singleplayer"/>
 
-    <ImageView android:id="@+id/Two"
-        android:layout_width="262dp"
-        android:layout_height="56dp"
-        android:src="@drawable/twoplayers"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Single"
-        android:layout_marginTop="40dp"/>
+ <ImageView
+  android:id="@+id/Two"
+  android:layout_width="262dp"
+  android:layout_height="56dp"
+  android:layout_below="@+id/Single"
+  android:layout_centerHorizontal="true"
+  android:layout_marginTop="40dp"
+  android:src="@drawable/twoplayers"/>
 
-    <ImageView android:id="@+id/Choose"
-        android:layout_width="220dp"
-        android:layout_height="47dp"
-        android:src="@drawable/icons"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Two"
-        android:layout_marginTop="40dp"/>
+ <ImageView
+  android:id="@+id/Choose"
+  android:layout_width="220dp"
+  android:layout_height="47dp"
+  android:layout_below="@+id/Two"
+  android:layout_centerHorizontal="true"
+  android:layout_marginTop="40dp"
+  android:src="@drawable/icons"/>
 </RelativeLayout>

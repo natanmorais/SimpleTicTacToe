@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Tic Tac Toe</string>
-    <string name="title_activity_icons">Choose Icons</string>
+ <string name="app_name">Tic Tac Toe</string>
+ <string name="title_activity_icons">Choose Icons</string>
 </resources>
