@@ -26,6 +26,31 @@ public class MainActivity extends Activity
 
         setContentView(R.layout.activity_main);
 
+        /*Para teste..
+
+        setContentView(R.layout.activity_partida);
+
+        Tabuleiro tabuleiro = (Tabuleiro)findViewById(R.id.tabuleiro);
+        tabuleiro.setDimensao(6);
+        tabuleiro.setOnTabuleiroListener(new Tabuleiro.OnTabuleiroListener()
+        {
+            @Override
+            public void onJogadaFinalizada(Tabuleiro view, int jogador, int row, int col)
+            {
+                Toast.makeText(MainActivity.this, String.format("jogador: %d row: %d col: %d", jogador, row, col), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onSemJogadas(Tabuleiro view)
+            {
+                Toast.makeText(MainActivity.this, "FIM", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        if(true) return;
+
+        */
+
         single = (ImageView)findViewById(R.id.Single);
         two = (ImageView)findViewById(R.id.Two);
         icons = (ImageView)findViewById(R.id.Choose);
