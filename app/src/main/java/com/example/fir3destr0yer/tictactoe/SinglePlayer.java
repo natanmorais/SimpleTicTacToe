@@ -113,7 +113,7 @@ public class SinglePlayer extends AppCompatActivity
                 float y = me.getY();
                 for(int n = 0; n < 3; n++)
                     for(int m = 0; m < 3; m++)
-                        if(x > m * (w / 3) && x < (m + 1) * (w / 3) && y > ((h - w) / 2) + (n * (w / 3)) && y < ((h - w) / 2) + ((n + 1) * (w / 3)))
+                        if(x > m * (w / 3) && x < (m + 1) * (w / 3) && y > ((h - w) / 2) + (n * (w / 3) + 2*(h/25)) && y < ((h - w) / 2) + ((n + 1) * (w / 3)) + 2*(h/25))
                             if(tabuleiro[m][n] == 0)
                             {
                                 tabuleiro[m][n] = 1;
