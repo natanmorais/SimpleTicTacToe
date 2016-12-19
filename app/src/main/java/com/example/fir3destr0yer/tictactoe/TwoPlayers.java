@@ -16,6 +16,10 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 public class TwoPlayers extends AppCompatActivity
 {
 
@@ -25,12 +29,27 @@ public class TwoPlayers extends AppCompatActivity
     int w, h, jogadas = 0, p1 = 0, p2 = 0;
     Canvas can;
     int pO, pX;
+    InterstitialAd mInterstitialAd;
+    int jogos = 1, numero = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.main);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-5374403399295176/7431833241");
+        //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+            }
+        });
+
+        requestNewInterstitial();
+
         t = new Tela(this);
         setContentView(t);
 
@@ -76,6 +95,14 @@ public class TwoPlayers extends AppCompatActivity
             pO = R.drawable.texture_o;
             pX = R.drawable.texture_x;
         }
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("SEE_YOUR_LOGCAT_TO_GET_YOUR_DEVICE_ID")
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
     }
 
     @Override
@@ -213,9 +240,6 @@ public class TwoPlayers extends AppCompatActivity
 
         private void checaFim()
         {
-            Paint p = new Paint();
-            p.setStyle(Paint.Style.STROKE);
-            p.setColor(new Color().rgb(30, 30, 30));
             for(int i = 0; i < 3; i++)
             {
                 if(tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][1] == tabuleiro[i][2] && tabuleiro[i][2] != 0)
@@ -238,6 +262,12 @@ public class TwoPlayers extends AppCompatActivity
                     }
                     jogadas = 0;
                     ganhaMoedas(1);
+                    numero++;
+                    if (mInterstitialAd.isLoaded() && jogos==numero) {
+                        mInterstitialAd.show();
+                        jogos++;
+                        numero = 0;
+                    }
                 }
             }
             for(int i = 0; i < 3; i++)
@@ -262,6 +292,12 @@ public class TwoPlayers extends AppCompatActivity
                     }
                     jogadas = 0;
                     ganhaMoedas(1);
+                    numero++;
+                    if (mInterstitialAd.isLoaded() && jogos==numero) {
+                        mInterstitialAd.show();
+                        jogos++;
+                        numero = 0;
+                    }
                 }
             }
             if(tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2] && tabuleiro[2][2] != 0)
@@ -284,6 +320,12 @@ public class TwoPlayers extends AppCompatActivity
                 }
                 jogadas = 0;
                 ganhaMoedas(1);
+                numero++;
+                if (mInterstitialAd.isLoaded() && jogos==numero) {
+                    mInterstitialAd.show();
+                    jogos++;
+                    numero = 0;
+                }
             }
             if(tabuleiro[2][0] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[0][2] && tabuleiro[0][2] != 0)
             {
@@ -305,6 +347,12 @@ public class TwoPlayers extends AppCompatActivity
                 }
                 jogadas = 0;
                 ganhaMoedas(1);
+                numero++;
+                if (mInterstitialAd.isLoaded() && jogos==numero) {
+                    mInterstitialAd.show();
+                    jogos++;
+                    numero = 0;
+                }
             }
             if(jogadas == 9)
             {
@@ -318,6 +366,12 @@ public class TwoPlayers extends AppCompatActivity
                 }
                 jogadas = 0;
                 ganhaMoedas(1);
+                numero++;
+                if (mInterstitialAd.isLoaded() && jogos==numero) {
+                    mInterstitialAd.show();
+                    jogos++;
+                    numero = 0;
+                }
             }
         }
     }

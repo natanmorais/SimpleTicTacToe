@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity
@@ -88,6 +91,12 @@ public class MainActivity extends Activity
 
         SharedPreferences settings = getSharedPreferences("Settings", MODE_PRIVATE);
         int coins = settings.getInt("Coins", 0);
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5374403399295176~6513503249");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
     }
 
 
