@@ -1,26 +1,29 @@
 {
-  
   "project_info": {
-    "project_number": "857137246932",
-    "firebase_url": "https://simple-tic-tac-toe-bce75.firebaseio.com",
-    "project_id": "simple-tic-tac-toe-bce75",
-    "storage_bucket": "simple-tic-tac-toe-bce75.appspot.com"
+    "project_number": "151706838476",
+    "firebase_url": "https://simple-tic-tac-toe-3132b.firebaseio.com",
+    "project_id": "simple-tic-tac-toe-3132b",
+    "storage_bucket": "simple-tic-tac-toe-3132b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:857137246932:android:57b04f1d50dc80df",
+        "mobilesdk_app_id": "1:151706838476:android:bc4f359b1955dd43",
         "android_client_info": {
-          "package_name": "com.example.fir3destr0yer.tictactoe"
+          "package_name": "com.asha.fir3destr0yer.tictactoe"
         }
       },
       "oauth_client": [
         {
-          "client_id": "857137246932-2vtvci90paisbss3k35uh26i2h8kq5oa.apps.googleusercontent.com",
+          "client_id": "151706838476-qrihu152j7vo37nnv8mguv6elb6ds8ij.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
-      "api_key": [{ "current_key": "" }],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg0DWlz3q9FGpmA2Fq_OFZlpVxCp3ORyw"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
