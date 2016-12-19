@@ -1,9 +1,11 @@
 package com.example.fir3destr0yer.tictactoe;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.multidex.MultiDex;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,12 +17,18 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends Activity
 {
 
-    public ImageView single, two, icons;
+    public ImageView single, two, icons, logo;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(newBase);
+        MultiDex.install(this);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -53,10 +61,12 @@ public class MainActivity extends Activity
         if(true) return;
 
         */
-
+        logo = (ImageView)findViewById(R.id.Logo);
         single = (ImageView)findViewById(R.id.Single);
         two = (ImageView)findViewById(R.id.Two);
         icons = (ImageView)findViewById(R.id.Choose);
+
+
 
         single.setOnClickListener(new View.OnClickListener()
         {
